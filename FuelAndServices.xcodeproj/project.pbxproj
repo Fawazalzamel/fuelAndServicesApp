@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4C8F9F2B9F16E300433448 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8F9E2B9F16E300433448 /* HomeViewController.swift */; };
+		9B4C8FA12B9F199900433448 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FA02B9F199900433448 /* ProfileViewController.swift */; };
+		9B4C8FA32B9F1B2600433448 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FA22B9F1B2600433448 /* RequestViewController.swift */; };
+		9B4C8FA62B9F883D00433448 /* FuelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FA52B9F883D00433448 /* FuelListViewController.swift */; };
+		9B4C8FA92B9FAC8A00433448 /* TyreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FA82B9FAC8A00433448 /* TyreListViewController.swift */; };
+		9B4C8FAB2B9FAD6D00433448 /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FAA2B9FAD6D00433448 /* ServiceListViewController.swift */; };
 		D2A6E73A2B9EF02100F38987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7392B9EF02100F38987 /* AppDelegate.swift */; };
 		D2A6E73C2B9EF02100F38987 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E73B2B9EF02100F38987 /* SceneDelegate.swift */; };
-		D2A6E73E2B9EF02100F38987 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E73D2B9EF02100F38987 /* ViewController.swift */; };
+		D2A6E73E2B9EF02100F38987 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E73D2B9EF02100F38987 /* MainTabBarController.swift */; };
 		D2A6E7432B9EF02200F38987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A6E7422B9EF02200F38987 /* Assets.xcassets */; };
 		D2A6E7462B9EF02200F38987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A6E7442B9EF02200F38987 /* LaunchScreen.storyboard */; };
 		D2A6E74F2B9EF02D00F38987 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D2A6E74E2B9EF02D00F38987 /* SnapKit */; };
@@ -22,10 +28,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B4C8F9E2B9F16E300433448 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9B4C8FA02B9F199900433448 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9B4C8FA22B9F1B2600433448 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		9B4C8FA52B9F883D00433448 /* FuelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelListViewController.swift; sourceTree = "<group>"; };
+		9B4C8FA82B9FAC8A00433448 /* TyreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreListViewController.swift; sourceTree = "<group>"; };
+		9B4C8FAA2B9FAD6D00433448 /* ServiceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
 		D2A6E7362B9EF02100F38987 /* FuelAndServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelAndServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A6E7392B9EF02100F38987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2A6E73B2B9EF02100F38987 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D2A6E73D2B9EF02100F38987 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D2A6E73D2B9EF02100F38987 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D2A6E7422B9EF02200F38987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2A6E7452B9EF02200F38987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2A6E7472B9EF02200F38987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,7 +95,13 @@
 		D2A6E75F2B9EF95100F38987 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				D2A6E73D2B9EF02100F38987 /* ViewController.swift */,
+				D2A6E73D2B9EF02100F38987 /* MainTabBarController.swift */,
+				9B4C8F9E2B9F16E300433448 /* HomeViewController.swift */,
+				9B4C8FA02B9F199900433448 /* ProfileViewController.swift */,
+				9B4C8FA22B9F1B2600433448 /* RequestViewController.swift */,
+				9B4C8FA52B9F883D00433448 /* FuelListViewController.swift */,
+				9B4C8FA82B9FAC8A00433448 /* TyreListViewController.swift */,
+				9B4C8FAA2B9FAD6D00433448 /* ServiceListViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -203,9 +221,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2A6E73E2B9EF02100F38987 /* ViewController.swift in Sources */,
+				9B4C8FAB2B9FAD6D00433448 /* ServiceListViewController.swift in Sources */,
+				9B4C8FA12B9F199900433448 /* ProfileViewController.swift in Sources */,
+				D2A6E73E2B9EF02100F38987 /* MainTabBarController.swift in Sources */,
+				9B4C8FA92B9FAC8A00433448 /* TyreListViewController.swift in Sources */,
+				9B4C8FA32B9F1B2600433448 /* RequestViewController.swift in Sources */,
 				D2A6E73A2B9EF02100F38987 /* AppDelegate.swift in Sources */,
+				9B4C8F9F2B9F16E300433448 /* HomeViewController.swift in Sources */,
 				D2A6E7652B9EFFAF00F38987 /* NetworkManger.swift in Sources */,
+				9B4C8FA62B9F883D00433448 /* FuelListViewController.swift in Sources */,
 				D2A6E73C2B9EF02100F38987 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
