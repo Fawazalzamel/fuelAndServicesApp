@@ -21,6 +21,9 @@
 		D2A6E7652B9EFFAF00F38987 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7642B9EFFAF00F38987 /* NetworkManger.swift */; };
 		D2A6E7672B9F0D2000F38987 /* SignUpViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7662B9F0D2000F38987 /* SignUpViewContoller.swift */; };
 		D2A6E7692B9F10CC00F38987 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7682B9F10CC00F38987 /* SignInViewController.swift */; };
+		D2A6E7732BA0531600F38987 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7722BA0531600F38987 /* RequestModel.swift */; };
+		D2A6E7762BA0533400F38987 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7742BA0533400F38987 /* SignUpViewController.swift */; };
+		D2A6E7772BA0533400F38987 /* RequestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7752BA0533400F38987 /* RequestPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		D2A6E7642B9EFFAF00F38987 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		D2A6E7662B9F0D2000F38987 /* SignUpViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewContoller.swift; sourceTree = "<group>"; };
 		D2A6E7682B9F10CC00F38987 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D2A6E7722BA0531600F38987 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		D2A6E7742BA0533400F38987 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D2A6E7752BA0533400F38987 /* RequestPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,8 @@
 		D2A6E75F2B9EF95100F38987 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				D2A6E7752BA0533400F38987 /* RequestPageViewController.swift */,
+				D2A6E7742BA0533400F38987 /* SignUpViewController.swift */,
 				D2A6E73D2B9EF02100F38987 /* ViewController.swift */,
 				D2A6E7662B9F0D2000F38987 /* SignUpViewContoller.swift */,
 				D2A6E7682B9F10CC00F38987 /* SignInViewController.swift */,
@@ -97,6 +105,7 @@
 		D2A6E7602B9EF95600F38987 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2A6E7722BA0531600F38987 /* RequestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,8 +220,11 @@
 			files = (
 				D2A6E73E2B9EF02100F38987 /* ViewController.swift in Sources */,
 				D2A6E73A2B9EF02100F38987 /* AppDelegate.swift in Sources */,
+				D2A6E7762BA0533400F38987 /* SignUpViewController.swift in Sources */,
 				D2A6E7692B9F10CC00F38987 /* SignInViewController.swift in Sources */,
+				D2A6E7772BA0533400F38987 /* RequestPageViewController.swift in Sources */,
 				D2A6E7652B9EFFAF00F38987 /* NetworkManger.swift in Sources */,
+				D2A6E7732BA0531600F38987 /* RequestModel.swift in Sources */,
 				D2A6E7672B9F0D2000F38987 /* SignUpViewContoller.swift in Sources */,
 				D2A6E73C2B9EF02100F38987 /* SceneDelegate.swift in Sources */,
 			);
