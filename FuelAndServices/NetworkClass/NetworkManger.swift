@@ -22,31 +22,31 @@ class NetworkManger{
     
     static let shared = NetworkManger()
     
-//    func signup(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
-//       let url = baseURLAuth + signupEndAuth
-//       AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
-//           switch response.result {
-//           case .success(let value):
-//               completion(.success(value))
-//           case .failure(let afError):
-//               completion(.failure(afError as Error))
-//           }
-//       }
-//   }
-//   
-//
-//    func signIn(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
-//       let url = baseUrl + "signin"
-//       
-//       AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
-//           switch response.result {
-//           case .success(let value):
-//               completion(.success(value))
-//           case .failure(let afError):
-//               completion(.failure(afError))
-//           }
-//       }
-//   }
+    func signup(user: UserModel, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
+       let url = baseURLAuth + signupEndAuth
+       AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
+           switch response.result {
+           case .success(let value):
+               completion(.success(value))
+           case .failure(let afError):
+               completion(.failure(afError as Error))
+           }
+       }
+   }
+   
+
+    func signIn(user: UserModel, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
+       let url = baseURLAuth + signinEndAuth
+       
+       AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
+           switch response.result {
+           case .success(let value):
+               completion(.success(value))
+           case .failure(let afError):
+               completion(.failure(afError))
+           }
+       }
+   }
     
     
 }
