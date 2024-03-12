@@ -1,3 +1,11 @@
+
+//
+//  SignInViewController.swift
+//  FuelAndServices
+//
+//  Created by Fawaz Alzamel on 11/03/2024.
+//
+
 import UIKit
 import Eureka
 
@@ -5,11 +13,14 @@ class SigninViewController: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "Sign in Page"
         setupForm()
     }
     
     private func setupForm() {
         form +++ Section("Enter User Name")
+        form +++ Section("Sign In")
         <<< TextRow() { row in
             row.title = "Username"
             row.placeholder = "Enter User Name"
@@ -35,11 +46,15 @@ class SigninViewController: FormViewController {
                         }
                     }
         }
+
+    
         <<< ButtonRow() { row in
-            row.title = "Submit"
+            row.title = "Sign In"
         }.onCellSelection { _, _ in
             self.signInTapped()
         }
+        
+        
     }
     
     @objc private func signInTapped() {
@@ -85,9 +100,48 @@ class SigninViewController: FormViewController {
 //        }
     }
     
+
+
     private func presentAlertWithTitle(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true, completion: nil)
     }
 }
+
+
+
+
+
+
+
+#if canImport(SwiftUI) && DEBUG
+struct SigninViewControllerPreview: PreviewProvider {
+    static var previews: some View {
+        GenericViewControllerRepresentable(SigninViewController())
+    }
+}
+#endif
+
+
+
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct GenericViewControllerRepresentable<ViewController: UIViewController>: UIViewControllerRepresentable {
+    
+    let viewController: ViewController
+    
+    init(_ builder: @autoclosure @escaping () -> ViewController) {
+        self.viewController = builder()
+    }
+    
+    func makeUIViewController(context: Context) -> ViewController {
+        viewController
+    }
+    
+    func updateUIViewController(_ uiViewController: ViewController, context: Context) {
+    }
+}
+#endif
