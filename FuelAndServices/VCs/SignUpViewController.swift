@@ -41,7 +41,7 @@ class SignUpViewController : FormViewController {
             
         }
         
-        <<< TextRow() { row in
+        <<< PasswordRow() { row in
             row.title = "Password"
             row.placeholder = "Enter Password"
             row.tag = "Password"
@@ -59,20 +59,6 @@ class SignUpViewController : FormViewController {
             row.title = "Email"
             row.placeholder = "Enter Email"
             row.tag = "Email"
-            row.add(rule: RuleRequired())
-            row.validationOptions = .validatesOnChange
-            row.cellUpdate { cell, row in
-                if !row.isValid{
-                    cell.titleLabel?.textColor = .red
-                }
-            }
-            
-        }
-        
-        <<< TextRow() { row in
-            row.title = "Name"
-            row.placeholder = "Enter Name"
-            row.tag = "Name"
             row.add(rule: RuleRequired())
             row.validationOptions = .validatesOnChange
             row.cellUpdate { cell, row in
@@ -118,13 +104,11 @@ class SignUpViewController : FormViewController {
         let usernameRow : TextRow? = form.rowBy(tag: "Username")
         let passwordRow :TextRow? = form.rowBy(tag: "Password")
         let emailRow :EmailRow? = form.rowBy(tag: "Email")
-        let nameRow :TextRow? = form.rowBy(tag: "Name")
         let phoneNumberRow :PhoneRow? = form.rowBy(tag: "PhoneNumber")
         
         let username = usernameRow?.value ?? ""
         let password = passwordRow?.value ?? ""
         let email = emailRow?.value ?? ""
-        let name = nameRow?.value ?? ""
         let phoneNumber = phoneNumberRow?.value
         
         //               let user = User(username: username, email: email, password: password)

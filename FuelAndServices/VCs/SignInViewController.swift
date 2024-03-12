@@ -19,11 +19,11 @@ class SigninViewController: FormViewController {
     }
     
     private func setupForm() {
-        form +++ Section("Enter User Name")
+        
         form +++ Section("Sign In")
         <<< TextRow() { row in
             row.title = "Username"
-            row.placeholder = "Enter User Name"
+            row.placeholder = "Enter Username"
             row.tag = "username"
             row.add(rule: RuleRequired())
             row.validationOptions = .validatesOnChange
@@ -34,7 +34,7 @@ class SigninViewController: FormViewController {
             }
         }
     
-        <<< TextRow() { row in
+        <<< PasswordRow() { row in
             row.title = "Password"
             row.placeholder = "Enter password"
             row.tag = "password"
@@ -68,7 +68,7 @@ class SigninViewController: FormViewController {
         }
         
         guard let usernameRow: TextRow = form.rowBy(tag: "username"),
-              let passwordRow: TextRow = form.rowBy(tag: "password"),
+              let passwordRow: PasswordRow = form.rowBy(tag: "password"),
               let username = usernameRow.value,
               let password = passwordRow.value else {
             

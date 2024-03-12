@@ -31,11 +31,13 @@
 		D2A6E75A2B9EF04F00F38987 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2A6E7592B9EF04F00F38987 /* Alamofire */; };
 		D2A6E75C2B9EF04F00F38987 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D2A6E75B2B9EF04F00F38987 /* AlamofireDynamic */; };
 		D2A6E7652B9EFFAF00F38987 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7642B9EFFAF00F38987 /* NetworkManger.swift */; };
-		D2A6E7672B9F0D2000F38987 /* SignUpViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7662B9F0D2000F38987 /* SignUpViewContoller.swift */; };
 		D2A6E7692B9F10CC00F38987 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7682B9F10CC00F38987 /* SignInViewController.swift */; };
 		D2A6E7732BA0531600F38987 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7722BA0531600F38987 /* RequestModel.swift */; };
 		D2A6E7762BA0533400F38987 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7742BA0533400F38987 /* SignUpViewController.swift */; };
 		D2A6E7772BA0533400F38987 /* RequestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7752BA0533400F38987 /* RequestPageViewController.swift */; };
+		D2A6E7792BA05F6C00F38987 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7782BA05F6C00F38987 /* WelcomeScreenViewController.swift */; };
+		D2A6E77B2BA06FD500F38987 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E77A2BA06FD500F38987 /* UserModel.swift */; };
+		D2A6E77D2BA0733E00F38987 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E77C2BA0733E00F38987 /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,11 +61,13 @@
 		D2A6E7452B9EF02200F38987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2A6E7472B9EF02200F38987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2A6E7642B9EFFAF00F38987 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
-		D2A6E7662B9F0D2000F38987 /* SignUpViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewContoller.swift; sourceTree = "<group>"; };
 		D2A6E7682B9F10CC00F38987 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D2A6E7722BA0531600F38987 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		D2A6E7742BA0533400F38987 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D2A6E7752BA0533400F38987 /* RequestPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPageViewController.swift; sourceTree = "<group>"; };
+		D2A6E7782BA05F6C00F38987 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		D2A6E77A2BA06FD500F38987 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D2A6E77C2BA0733E00F38987 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +132,6 @@
 			children = (
 				D2A6E7752BA0533400F38987 /* RequestPageViewController.swift */,
 				D2A6E7742BA0533400F38987 /* SignUpViewController.swift */,
-				D2A6E73D2B9EF02100F38987 /* ViewController.swift */,
-				D2A6E7662B9F0D2000F38987 /* SignUpViewContoller.swift */,
 				D2A6E7682B9F10CC00F38987 /* SignInViewController.swift */,
 				46807D562B9F14940066BC73 /* ProfileViewController.swift */,
 				469D2E2C2BA03CF3002E3E61 /* HistoryTableViewController.swift */,
@@ -141,6 +143,7 @@
 				9B4C8FA52B9F883D00433448 /* FuelListViewController.swift */,
 				9B4C8FA82B9FAC8A00433448 /* TyreListViewController.swift */,
 				9B4C8FAA2B9FAD6D00433448 /* ServiceListViewController.swift */,
+				D2A6E7782BA05F6C00F38987 /* WelcomeScreenViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -149,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				D2A6E7722BA0531600F38987 /* RequestModel.swift */,
+				D2A6E77A2BA06FD500F38987 /* UserModel.swift */,
+				D2A6E77C2BA0733E00F38987 /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				46807D592B9F15000066BC73 /* Profile.swift in Sources */,
 				469D2E2B2BA03C08002E3E61 /* History.swift in Sources */,
 				D2A6E73A2B9EF02100F38987 /* AppDelegate.swift in Sources */,
+				D2A6E77D2BA0733E00F38987 /* Token.swift in Sources */,
 				D2A6E7762BA0533400F38987 /* SignUpViewController.swift in Sources */,
 				D2A6E7692B9F10CC00F38987 /* SignInViewController.swift in Sources */,
 				D2A6E7772BA0533400F38987 /* RequestPageViewController.swift in Sources */,
@@ -283,6 +289,10 @@
 				9B4C8F9F2B9F16E300433448 /* HomeViewController.swift in Sources */,
 				D2A6E7652B9EFFAF00F38987 /* NetworkManger.swift in Sources */,
 				9B4C8FA62B9F883D00433448 /* FuelListViewController.swift in Sources */,
+				D2A6E7792BA05F6C00F38987 /* WelcomeScreenViewController.swift in Sources */,
+				D2A6E7652B9EFFAF00F38987 /* NetworkManger.swift in Sources */,
+				D2A6E7732BA0531600F38987 /* RequestModel.swift in Sources */,
+				D2A6E77B2BA06FD500F38987 /* UserModel.swift in Sources */,
 				D2A6E73C2B9EF02100F38987 /* SceneDelegate.swift in Sources */,
 				469D2E2D2BA03CF3002E3E61 /* HistoryTableViewController.swift in Sources */,
 			);
