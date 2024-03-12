@@ -10,9 +10,43 @@ import Alamofire
 
 class NetworkManger{
     
-    private let baseURL = ""
+    private let baseURLUser = "http://localhost:8080/api/v1/user"
+    private let baseURLAuth = "http://localhost:8080/api/v1/auth"
+    
+    private let updateUser = "/update-user"
+    private let addRequestUser = "/add-request"
+    private let requestList = "/request-list"
+    
+    private let signinEndAuth = "/signin"
+    private let signupEndAuth = "/signup"
     
     static let shared = NetworkManger()
+    
+//    func signup(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
+//       let url = baseURLAuth + signupEndAuth
+//       AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
+//           switch response.result {
+//           case .success(let value):
+//               completion(.success(value))
+//           case .failure(let afError):
+//               completion(.failure(afError as Error))
+//           }
+//       }
+//   }
+//   
+//
+//    func signIn(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
+//       let url = baseUrl + "signin"
+//       
+//       AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
+//           switch response.result {
+//           case .success(let value):
+//               completion(.success(value))
+//           case .failure(let afError):
+//               completion(.failure(afError))
+//           }
+//       }
+//   }
     
     
 }
