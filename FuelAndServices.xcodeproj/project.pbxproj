@@ -275,10 +275,7 @@
 				D2A6E7772BA0533400F38987 /* RequestPageViewController.swift in Sources */,
 				46807D572B9F14940066BC73 /* ProfileViewController.swift in Sources */,
 				D2A6E7652B9EFFAF00F38987 /* NetworkManger.swift in Sources */,
-<<<<<<< HEAD
-=======
 				9B4C8FB32BA1963800433448 /* RequestModel.swift in Sources */,
->>>>>>> faten_new
 				9B4C8FAB2B9FAD6D00433448 /* ServiceListViewController.swift in Sources */,
 				9B4C8FB42BA1963800433448 /* Token.swift in Sources */,
 				9B4C8FA12B9F199900433448 /* ProfileViewController.swift in Sources */,
