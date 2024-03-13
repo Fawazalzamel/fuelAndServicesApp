@@ -24,7 +24,7 @@ class FuelListViewController: FormViewController {
                   <<< LabelRow {
                       $0.title = fuel.fuelType
                       $0.value = String(format: "KWD %.2f", fuel.price)
-                      $0.cell.imageView?.image = UIImage(named: "fuel") // Set your fuel icon image here
+                      $0.cell.imageView?.image = UIImage(named: "fuel2") 
                   }
           }
       }

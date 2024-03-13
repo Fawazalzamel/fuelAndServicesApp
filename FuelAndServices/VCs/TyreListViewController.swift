@@ -30,7 +30,7 @@ class TyreListViewController: FormViewController {
                    <<< LabelRow {
                        $0.title = tyre.tyreType
                        $0.value = String(format: "KWD %.2f", tyre.price)
-                       $0.cell.imageView?.image = UIImage(named: "tyre") 
+                       $0.cell.imageView?.image = UIImage(named: "tyre2") 
                    }
            }
        }

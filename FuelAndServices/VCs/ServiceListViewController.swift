@@ -23,7 +23,7 @@ class ServiceListViewController: FormViewController {
                 <<< LabelRow {
                     $0.title = service.serviceType
                     $0.value = String(format: "KWD %.2f", service.price)
-                    $0.cell.imageView?.image = UIImage(named: "service") 
+                    $0.cell.imageView?.image = UIImage(named: "service2") 
                 }
         }
     }
