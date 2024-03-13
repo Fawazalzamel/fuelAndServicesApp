@@ -38,7 +38,7 @@ class DetailViewController: UIViewController {
     func setupViews(){
         view.backgroundColor = .white
             
-        serviceLabel.font = .systemFont(ofSize: 16, weight: .bold)
+        serviceLabel.font = .systemFont(ofSize: 13, weight: .bold)
         dateLabel.font = .systemFont(ofSize: 16, weight: .medium)
             
         //image-Border:
@@ -53,7 +53,8 @@ class DetailViewController: UIViewController {
         serviceLabel.snp.makeConstraints { make in
       make.top.equalTo(view.safeAreaLayoutGuide).offset(70)
       make.centerX.equalToSuperview()
-      make.width.height.equalTo(100)  // Example size, adjust as needed
+      make.height.equalTo(100)
+            make.width.equalTo(100)// Example size, adjust as needed
     }
 
         dateLabel.snp.makeConstraints { make in
