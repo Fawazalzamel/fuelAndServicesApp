@@ -5,7 +5,7 @@ import SnapKit
 class HomeViewController: UIViewController {
 
     let topImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "ad2"))
+        let imageView = UIImageView(image: UIImage(named: "logo"))
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -117,7 +117,7 @@ class HomeViewController: UIViewController {
         topImageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(-80)
             make.leading.trailing.equalToSuperview().offset(8)
-            make.height.equalTo(250)
+            make.height.equalTo(220)
 //            make.width.equalTo(200)
             
         }
