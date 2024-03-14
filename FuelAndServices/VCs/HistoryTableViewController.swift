@@ -10,7 +10,7 @@ import SnapKit
 
 class HistoryTableViewController: UITableViewController {
     
-    var history: [History] = [History(serviceType: "", date: " 12/3/24 - 8:00pm ", typeImage: "tyre")]
+    var history: [History] = [History(serviceType: "Tyers", date: " 12/3/24 - 8:00pm ", typeImage: "tyre2")]
 
    
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class HistoryTableViewController: UITableViewController {
         
         
        //Configure
-        cell.textLabel?.text = " \(historyCell.serviceType) \(historyCell.date) \(historyCell.typeImage)"
+        cell.textLabel?.text = " \(historyCell.serviceType) \(historyCell.date) "
 
         cell.imageView?.image = UIImage(named: historyCell.typeImage)
         
