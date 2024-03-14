@@ -43,6 +43,10 @@ class NetworkManger{
            case .success(let value):
                completion(.success(value))
            case .failure(let afError):
+               // EXTRA LINE FOR DEBUGGING
+                if let data = response.data, let str = String(data: data, encoding: .utf8) {
+                    print("Raw response: \(str)")
+                }
                completion(.failure(afError))
            }
        }

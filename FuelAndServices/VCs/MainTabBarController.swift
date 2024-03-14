@@ -2,11 +2,15 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
+    var token : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupViewControllers()
         customizeTabBarAppearance()
+        token = UserDefaults.standard.string(forKey: "token")
+        print(token)
     }
     
     func setupViewControllers() {

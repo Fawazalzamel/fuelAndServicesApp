@@ -122,6 +122,8 @@ class SignUpViewController : FormViewController {
                         switch success{
                         case .success(let tokenResponse):
                             print(tokenResponse.token)
+                            let vC = MainTabBarController()
+                            vC.token = tokenResponse.token
                         case .failure(let error):
                             print(error)
                         }
@@ -137,7 +139,3 @@ class SignUpViewController : FormViewController {
     }
     
 }
-
-
-
-

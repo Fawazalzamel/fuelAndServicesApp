@@ -87,14 +87,16 @@ class SigninViewController: FormViewController {
                 DispatchQueue.main.async {
                    
                                     
-                    let vC = HomeViewController()
+                    let vC = MainTabBarController()
                     vC.token = tokenResponse.token
+//                    self.present(vC, animated: true)
                     self.navigationController?.pushViewController(vC, animated: true)
 
                 }
             case .failure(let error):
                 
                 print("Sign in failed with error: \(error.localizedDescription)")
+                
                 DispatchQueue.main.async {
                 }
             }
@@ -109,10 +111,3 @@ class SigninViewController: FormViewController {
         present(alert, animated: true, completion: nil)
     }
 }
-
-
-
-
-
-
-

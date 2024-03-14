@@ -72,6 +72,7 @@ class HomeViewController: UIViewController {
         setupTopImageView()
         setupUI()
         setupWalletSection()
+        self.navigationItem.backBarButtonItem?.isHidden = true
     }
     private func setupWalletSection() {
             view.addSubview(walletLabel)
