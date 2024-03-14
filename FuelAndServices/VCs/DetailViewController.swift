@@ -22,8 +22,8 @@ class DetailViewController: UIViewController {
         view.addSubview(dateLabel)
         view.addSubview(historyImageView)
         
-        historyImageView.image = UIImage(named: "tyre")
-        serviceLabel.text = " ServiceType: Tyre "
+        historyImageView.image = UIImage(named: "tyre2")
+        serviceLabel.text = "ServiceType:       "
         dateLabel.text = " 12-3-2024  "
         
         
@@ -54,7 +54,7 @@ class DetailViewController: UIViewController {
       make.top.equalTo(view.safeAreaLayoutGuide).offset(70)
       make.centerX.equalToSuperview()
       make.height.equalTo(100)
-            make.width.equalTo(100)// Example size, adjust as needed
+      make.width.equalTo(100)// Example size, adjust as needed
     }
 
         dateLabel.snp.makeConstraints { make in
