@@ -69,7 +69,7 @@ class SignUpViewController : FormViewController {
             
         }
         
-        <<< PhoneRow() { row in
+        <<< IntRow() { row in
             row.title = "Phone Number"
             row.placeholder = "Enter Phone Number"
             row.tag = "PhoneNumber"
@@ -104,31 +104,30 @@ class SignUpViewController : FormViewController {
         let usernameRow : TextRow? = form.rowBy(tag: "Username")
         let passwordRow :TextRow? = form.rowBy(tag: "Password")
         let emailRow :EmailRow? = form.rowBy(tag: "Email")
-        let phoneNumberRow :PhoneRow? = form.rowBy(tag: "PhoneNumber")
+        let phoneNumberRow :IntRow? = form.rowBy(tag: "PhoneNumber")
         
         let username = usernameRow?.value ?? ""
         let password = passwordRow?.value ?? ""
         let email = emailRow?.value ?? ""
-        let phoneNumber = phoneNumberRow?.value
+        let phoneNumber = phoneNumberRow?.value ?? 00
         
-//                       let user = UserModel(user_Id: 0, username: username, email: email, password: password, phoneNumber: phoneNumber, token: nil)
+        let user = UserModel(user_Id: nil, username: username, email: email, password: password, phoneNumber: phoneNumber, token: nil)
         
         
         
-//                NetworkManger.shared.signup(user: user ){ success in
-//        
-//                    DispatchQueue.main.async {
-//        
-//                        switch success{
-//                        case .success(let tokenResponse):
-//                            print(tokenResponse.token)
-//                        case .failure(let error):
-//                            print(error)
-//                        }
-//                        }
-//                    }
+                NetworkManger.shared.signup(user: user ){ success in
         
-        //Check with mubark the code above 
+                    DispatchQueue.main.async {
+        
+                        switch success{
+                        case .success(let tokenResponse):
+                            print(tokenResponse.token)
+                        case .failure(let error):
+                            print(error)
+                        }
+                        }
+                    }
+        
     }
     
     private func presentAlertWithTitle(title: String, message: String) {
@@ -141,33 +140,4 @@ class SignUpViewController : FormViewController {
 
 
 
-#if canImport(SwiftUI) && DEBUG
-struct SignUpViewControllerPreview: PreviewProvider {
-    static var previews: some View {
-        GenericViewControllerRepresentable(SignUpViewController())
-    }
-}
-#endif
 
-
-
-
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-
-struct enericViewControllerRepresentable<ViewController: UIViewController>: UIViewControllerRepresentable {
-    
-    let viewController: ViewController
-    
-    init(_ builder: @autoclosure @escaping () -> ViewController) {
-        self.viewController = builder()
-    }
-    
-    func makeUIViewController(context: Context) -> ViewController {
-        viewController
-    }
-    
-    func updateUIViewController(_ uiViewController: ViewController, context: Context) {
-    }
-}
-#endif
