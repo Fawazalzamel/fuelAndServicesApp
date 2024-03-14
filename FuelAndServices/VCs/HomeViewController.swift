@@ -5,7 +5,7 @@ import SnapKit
 class HomeViewController: UIViewController {
 
     let topImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "logo"))
+        let imageView = UIImageView(image: UIImage(named: "logo2"))
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -20,6 +20,15 @@ class HomeViewController: UIViewController {
 
         return label
     }()
+    let subTitleDescriptionLabel: UILabel = {
+           let label = UILabel()
+           label.text = "Click to check services types and prices"
+           label.textAlignment = .left
+           label.font = UIFont.systemFont(ofSize: 12)
+           label.textColor = .gray
+           return label
+       }()
+    
     let walletLabel: UILabel = {
             let label = UILabel()
             label.text = "Wallet Balance:"
@@ -58,6 +67,8 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+            //.black
         setupTopImageView()
         setupUI()
         setupWalletSection()
@@ -116,8 +127,8 @@ class HomeViewController: UIViewController {
 
         topImageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(-80)
-            make.leading.trailing.equalToSuperview().offset(8)
-            make.height.equalTo(220)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(290)
 //            make.width.equalTo(200)
             
         }
@@ -129,23 +140,31 @@ class HomeViewController: UIViewController {
 
         let card1Button = createCardButton(image: UIImage(named: "fuel2"), title: "Fuel", action: #selector(navigateToFuelList))
         let card2Button = createCardButton(image: UIImage(named: "tyre2"), title: "Tyre", action: #selector(navigateToTyreList))
-        let card3Button = createCardButton(image: UIImage(named: "car"), title: "Services", action: #selector(navigateToServiceList))
+        let card3Button = createCardButton(image: UIImage(named: "car"), title: "Maintenance", action: #selector(navigateToServiceList))
 
         let cardsStackView = UIStackView(arrangedSubviews: [card1Button, card2Button, card3Button])
         setupCardsStackView(cardsStackView)
 
         view.addSubview(cardsStackView)
         setupCardsStackViewConstraints(cardsStackView)
+        view.addSubview(subTitleDescriptionLabel)
+               setupSubTitleDescriptionLabelConstraints(subTitleDescriptionLabel, below: cardsStackView)
     }
 
     private func setupTitleLabelConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(topImageView.snp.bottom).offset(40)
+            make.top.equalTo(topImageView.snp.bottom).offset(50)
             make.leading.equalToSuperview().offset(15)
-            make.trailing.equalToSuperview().offset(-20)
+            make.trailing.equalToSuperview().offset(-30)
         }
     }
-
+    private func setupSubTitleDescriptionLabelConstraints(_ label: UILabel, below view: UIView) {
+           label.snp.makeConstraints { make in
+               make.top.equalTo(titleLabel.snp.bottom).offset(5)
+               make.leading.equalToSuperview().offset(15)
+               make.trailing.equalToSuperview().offset(-30)
+           }
+       }
     private func createCardButton(image: UIImage?, title: String, action: Selector) -> UIView {
         let containerView = UIView()
         setupContainerView(containerView)
@@ -225,7 +244,7 @@ class HomeViewController: UIViewController {
     }
 
     @objc private func navigateToServiceList() {
-        navigateToServiceListViewController(title: "Service List")
+        navigateToServiceListViewController(title: "Maintenance List")
     }
 
     private func navigateToFuelListViewController(title: String) {

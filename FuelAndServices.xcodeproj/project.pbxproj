@@ -268,6 +268,7 @@
 				D257E21C2BA07E670079B761 /* UserModel.swift in Sources */,
 				469D2E2B2BA03C08002E3E61 /* History.swift in Sources */,
 				D257E21D2BA07E670079B761 /* RequestModel.swift in Sources */,
+				469D2E2B2BA03C08002E3E61 /* History.swift in Sources */,
 				D2A6E73A2B9EF02100F38987 /* AppDelegate.swift in Sources */,
 				D2A6E7762BA0533400F38987 /* SignUpViewController.swift in Sources */,
 				D2A6E7692B9F10CC00F38987 /* SignInViewController.swift in Sources */,
