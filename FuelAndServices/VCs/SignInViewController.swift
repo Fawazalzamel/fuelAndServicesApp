@@ -75,10 +75,11 @@ class SigninViewController: FormViewController {
             return print("error")
         }
         
-//        let user = User(username: username, email: "", password: password)
-//
-//        
-//        NetworkManager.shared.signIn(user: user) { result in
+
+        
+//            let user = UserModel(user_Id: 0, username: username, email: nil, password: password, phoneNumber: nil, token: nil)
+        
+//        NetworkManger.shared.signIn(user: user) { result in
 //            switch result {
 //            case .success(let tokenResponse):
 //                
@@ -86,7 +87,7 @@ class SigninViewController: FormViewController {
 //                DispatchQueue.main.async {
 //                   
 //                                    
-//                    let vC = ViewController()
+//                    let vC = HomeViewController()
 //                    vC.token = tokenResponse.token
 //                    self.navigationController?.pushViewController(vC, animated: true)
 //
