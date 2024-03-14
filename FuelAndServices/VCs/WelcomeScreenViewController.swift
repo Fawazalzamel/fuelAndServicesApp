@@ -13,7 +13,11 @@ class WelcomeScreenViewController: UIViewController {
     let welcomeTextLabel = UILabel()
     let signInButton = UIButton()
     let signUpButton = UIButton()
-    
+    let topImageView: UIImageView = {
+    let imageView = UIImageView(image: UIImage(named: "logoblck"))
+    imageView.contentMode = .scaleAspectFit
+    return imageView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +32,19 @@ class WelcomeScreenViewController: UIViewController {
     
     func setUp(){
         
-        welcomeTextLabel.text = "Welcome to Fuel & Services App"
+        welcomeTextLabel.text = " Welcome "
         welcomeTextLabel.font = UIFont.boldSystemFont(ofSize: 25)
         
         signInButton.setTitle("Sign In", for: .normal)
-        signInButton.backgroundColor =  #colorLiteral(red: 0.01246238127, green: 0.5615252256, blue: 0.3185392618, alpha: 1)
+       // signInButton.backgroundColor =  #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        signInButton.backgroundColor = .darkerOrange
         signInButton.setTitleColor(UIColor.white, for: .normal)
         signInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
         signInButton.layer.cornerRadius = 10
         
         
         signUpButton.setTitle("Sign Up", for: .normal)
-        signUpButton.backgroundColor =  #colorLiteral(red: 0.01246238127, green: 0.5615252256, blue: 0.3185392618, alpha: 1)
+        signUpButton.backgroundColor = .darkerOrange
         signUpButton.setTitleColor(UIColor.white, for: .normal)
         signUpButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
         signUpButton.layer.cornerRadius = 10

@@ -26,43 +26,32 @@ class RequestPageViewController: FormViewController {
     
     private func setupForm() {
         form +++ Section("Request Form")
-        <<< ActionSheetRow<String>() { row in
-            row.title = "Request Type"
-            row.options = ["Fuel", "Tires", "Major or Minor Service"]
-            row.value = "Request Type"
-            row.tag = "requestType"
-                
-                
-        }
+        
     
         
-        <<< TextRow() { row in
+        <<< ActionSheetRow<CarType>() { row in
             row.title = "Car Type"
-            row.placeholder = "Enter Car Type"
+            row.options = [CarType.saloon,CarType.suv,CarType.truck]
+            row.noValueDisplayText = "Car Type"
             row.tag = "carType"
-            row.add(rule: RuleRequired())
-            row.validationOptions = .validatesOnChange
-            row.cellUpdate { cell, row in
-                if !row.isValid{
-                    cell.titleLabel?.textColor = .red
-                }
-            }
+            
         }
         
         
-        <<< ActionSheetRow<String>() { row in
+        <<< ActionSheetRow<FuelType>() { row in
             row.title = "Fuel Type"
-            row.options = ["98 Fuel", "95 Fuel", "91 Fuel", "Diesel"]
-            row.value = "Fuel Type (Optional)"
+            row.options = [FuelType.regular,FuelType.preimum,FuelType.disel]
+            row.noValueDisplayText = "Fuel Type (Optional)"
             row.tag = "fuelType"
         }
         
         
-        <<< ActionSheetRow<String> { row in
+        <<< ActionSheetRow<ServiceType> { row in
             row.title = "Service Type"
-            row.options = ["Major Service", "Minor Service"]
-            row.value = "Service Type (Optional)"
+            row.options = [ServiceType.major,ServiceType.minor, ServiceType.tires,ServiceType.fuel]
+            row.noValueDisplayText = "Service Type (Optional)"
             row.tag = "serviceType"
+           
                     }
         
         <<< TextRow() { row in
@@ -88,7 +77,7 @@ class RequestPageViewController: FormViewController {
         }
         
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(submitTapped))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(submitTapped))
     }
     
     @objc func submitTapped() {
@@ -100,27 +89,29 @@ class RequestPageViewController: FormViewController {
                     return
                 }
         
-                let requestTypeRow: TextRow? = form.rowBy(tag: "requestType")
+               
         
-                let carTypeRow: TextRow? = form.rowBy(tag: "carType")
-                let fuelTypeRow: TextRow? = form.rowBy(tag: "fuelType")
-                let serviceTypeRow: TextRow? = form.rowBy(tag: "serviceType")
-        
+                let carTypeRow: ActionSheetRow<CarType>? = form.rowBy(tag: "carType")
+                let fuelTypeRow: ActionSheetRow<FuelType>? = form.rowBy(tag: "fuelType")
+                let serviceTypeRow: ActionSheetRow<ServiceType>? = form.rowBy(tag: "serviceType")
                 let locationRow: TextRow? = form.rowBy(tag: "location")
         
         
-                let requestType = requestTypeRow?.value ?? ""
+      
         
-                let carType = carTypeRow?.value ?? ""
+                let carType = carTypeRow?.value
+       
+                let fuelType = fuelTypeRow?.value
         
-                let fuelType = fuelTypeRow?.value ?? ""
-        
-                let serviceType = serviceTypeRow?.value ?? ""
+                let serviceType = serviceTypeRow?.value
         
                 let location = locationRow?.value ?? ""
-                    
-//                let pet = Pet(id: nil, name: name, adopted: true, image: imageUrl, age: age, gender: gender)
-//                    print(pet)
+        
+
+        
+        let request = RequestModel(request_Id: nil, location: location, carType: carType, fuelType: fuelType)
+        print(request)
+//
 //              // Call addBook to add the book, backend will handle assigning an ID
 //              NetworkManager.shared.addPet(pet: pet) { success in
 //                  DispatchQueue.main.async {
@@ -132,12 +123,32 @@ class RequestPageViewController: FormViewController {
 //                      }
 //                  }
 //              }
+        
+        alertWithTitle(title: "Request Successful", message: "")
+        
+    
+        
+        
+        
           }
     
     private func presentAlertWithTitle(title: String, message: String) {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             present(alert, animated: true, completion: nil)
+        }
+    
+    private func alertWithTitle(title: String, message: String) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { UIAlertAction in
+            let HomeVC = MainTabBarController()
+            HomeVC.modalPresentationStyle = .fullScreen
+                self.present(HomeVC,animated: true, completion: nil)
+        }))
+            present(alert, animated: true, completion: nil)
+        
+        
+        
         }
 }
 

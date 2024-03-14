@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		465A6E792BA193BD001678BB /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A6E762BA193BD001678BB /* Token.swift */; };
-		465A6E7A2BA193BD001678BB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A6E772BA193BD001678BB /* UserModel.swift */; };
-		465A6E7B2BA193BD001678BB /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A6E782BA193BD001678BB /* RequestModel.swift */; };
 		46807D572B9F14940066BC73 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46807D562B9F14940066BC73 /* ProfileViewController.swift */; };
 		46807D592B9F15000066BC73 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46807D582B9F15000066BC73 /* Profile.swift */; };
 		469D2E2B2BA03C08002E3E61 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469D2E2A2BA03C08002E3E61 /* History.swift */; };
@@ -17,13 +14,12 @@
 		469D2E2F2BA043A9002E3E61 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469D2E2E2BA043A9002E3E61 /* DetailViewController.swift */; };
 		9B4C8F9F2B9F16E300433448 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8F9E2B9F16E300433448 /* HomeViewController.swift */; };
 		9B4C8FA12B9F199900433448 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FA02B9F199900433448 /* ProfileViewController.swift */; };
-		9B4C8FA32B9F1B2600433448 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FA22B9F1B2600433448 /* RequestViewController.swift */; };
 		9B4C8FA62B9F883D00433448 /* FuelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FA52B9F883D00433448 /* FuelListViewController.swift */; };
 		9B4C8FA92B9FAC8A00433448 /* TyreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FA82B9FAC8A00433448 /* TyreListViewController.swift */; };
 		9B4C8FAB2B9FAD6D00433448 /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FAA2B9FAD6D00433448 /* ServiceListViewController.swift */; };
-		9B4C8FB32BA1963800433448 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FB02BA1963800433448 /* RequestModel.swift */; };
-		9B4C8FB42BA1963800433448 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FB12BA1963800433448 /* Token.swift */; };
-		9B4C8FB52BA1963800433448 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8FB22BA1963800433448 /* UserModel.swift */; };
+		D257E21B2BA07E670079B761 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D257E2182BA07E670079B761 /* Token.swift */; };
+		D257E21C2BA07E670079B761 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D257E2192BA07E670079B761 /* UserModel.swift */; };
+		D257E21D2BA07E670079B761 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D257E21A2BA07E670079B761 /* RequestModel.swift */; };
 		D2A6E73A2B9EF02100F38987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E7392B9EF02100F38987 /* AppDelegate.swift */; };
 		D2A6E73C2B9EF02100F38987 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E73B2B9EF02100F38987 /* SceneDelegate.swift */; };
 		D2A6E73E2B9EF02100F38987 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6E73D2B9EF02100F38987 /* MainTabBarController.swift */; };
@@ -43,9 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		465A6E762BA193BD001678BB /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		465A6E772BA193BD001678BB /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		465A6E782BA193BD001678BB /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		46807D562B9F14940066BC73 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		46807D582B9F15000066BC73 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = FuelAndServices/Models/Profile.swift; sourceTree = SOURCE_ROOT; };
 		469D2E2A2BA03C08002E3E61 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
@@ -53,13 +46,12 @@
 		469D2E2E2BA043A9002E3E61 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9B4C8F9E2B9F16E300433448 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9B4C8FA02B9F199900433448 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		9B4C8FA22B9F1B2600433448 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		9B4C8FA52B9F883D00433448 /* FuelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelListViewController.swift; sourceTree = "<group>"; };
 		9B4C8FA82B9FAC8A00433448 /* TyreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreListViewController.swift; sourceTree = "<group>"; };
 		9B4C8FAA2B9FAD6D00433448 /* ServiceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
-		9B4C8FB02BA1963800433448 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
-		9B4C8FB12BA1963800433448 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		9B4C8FB22BA1963800433448 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D257E2182BA07E670079B761 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		D257E2192BA07E670079B761 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D257E21A2BA07E670079B761 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		D2A6E7362B9EF02100F38987 /* FuelAndServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelAndServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A6E7392B9EF02100F38987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2A6E73B2B9EF02100F38987 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,13 +86,20 @@
 		469D2E292BA03BD7002E3E61 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9B4C8FB02BA1963800433448 /* RequestModel.swift */,
-				9B4C8FB12BA1963800433448 /* Token.swift */,
-				9B4C8FB22BA1963800433448 /* UserModel.swift */,
+				D257E21A2BA07E670079B761 /* RequestModel.swift */,
+				D257E2182BA07E670079B761 /* Token.swift */,
+				D257E2192BA07E670079B761 /* UserModel.swift */,
 				46807D582B9F15000066BC73 /* Profile.swift */,
 				469D2E2A2BA03C08002E3E61 /* History.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D257E2172BA07D150079B761 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		D2A6E72D2B9EF02100F38987 = {
@@ -108,6 +107,7 @@
 			children = (
 				D2A6E7382B9EF02100F38987 /* FuelAndServices */,
 				D2A6E7372B9EF02100F38987 /* Products */,
+				D257E2172BA07D150079B761 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,20 +137,19 @@
 		D2A6E75F2B9EF95100F38987 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				D2A6E7752BA0533400F38987 /* RequestPageViewController.swift */,
+				D2A6E7782BA05F6C00F38987 /* WelcomeScreenViewController.swift */,
 				D2A6E7742BA0533400F38987 /* SignUpViewController.swift */,
 				D2A6E7682B9F10CC00F38987 /* SignInViewController.swift */,
+				9B4C8F9E2B9F16E300433448 /* HomeViewController.swift */,
+				D2A6E73D2B9EF02100F38987 /* MainTabBarController.swift */,
+				9B4C8FAA2B9FAD6D00433448 /* ServiceListViewController.swift */,
+				9B4C8FA82B9FAC8A00433448 /* TyreListViewController.swift */,
+				9B4C8FA52B9F883D00433448 /* FuelListViewController.swift */,
 				46807D562B9F14940066BC73 /* ProfileViewController.swift */,
 				469D2E2C2BA03CF3002E3E61 /* HistoryTableViewController.swift */,
 				469D2E2E2BA043A9002E3E61 /* DetailViewController.swift */,
-				D2A6E73D2B9EF02100F38987 /* MainTabBarController.swift */,
-				9B4C8F9E2B9F16E300433448 /* HomeViewController.swift */,
 				9B4C8FA02B9F199900433448 /* ProfileViewController.swift */,
-				9B4C8FA22B9F1B2600433448 /* RequestViewController.swift */,
-				9B4C8FA52B9F883D00433448 /* FuelListViewController.swift */,
-				9B4C8FA82B9FAC8A00433448 /* TyreListViewController.swift */,
-				9B4C8FAA2B9FAD6D00433448 /* ServiceListViewController.swift */,
-				D2A6E7782BA05F6C00F38987 /* WelcomeScreenViewController.swift */,
+				D2A6E7752BA0533400F38987 /* RequestPageViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -266,23 +265,20 @@
 				469D2E2F2BA043A9002E3E61 /* DetailViewController.swift in Sources */,
 				D2A6E73E2B9EF02100F38987 /* MainTabBarController.swift in Sources */,
 				46807D592B9F15000066BC73 /* Profile.swift in Sources */,
-				465A6E7A2BA193BD001678BB /* UserModel.swift in Sources */,
+				D257E21C2BA07E670079B761 /* UserModel.swift in Sources */,
 				469D2E2B2BA03C08002E3E61 /* History.swift in Sources */,
-				465A6E7B2BA193BD001678BB /* RequestModel.swift in Sources */,
+				D257E21D2BA07E670079B761 /* RequestModel.swift in Sources */,
 				D2A6E73A2B9EF02100F38987 /* AppDelegate.swift in Sources */,
 				D2A6E7762BA0533400F38987 /* SignUpViewController.swift in Sources */,
 				D2A6E7692B9F10CC00F38987 /* SignInViewController.swift in Sources */,
 				D2A6E7772BA0533400F38987 /* RequestPageViewController.swift in Sources */,
 				46807D572B9F14940066BC73 /* ProfileViewController.swift in Sources */,
 				D2A6E7652B9EFFAF00F38987 /* NetworkManger.swift in Sources */,
-				9B4C8FB32BA1963800433448 /* RequestModel.swift in Sources */,
 				9B4C8FAB2B9FAD6D00433448 /* ServiceListViewController.swift in Sources */,
-				9B4C8FB42BA1963800433448 /* Token.swift in Sources */,
 				9B4C8FA12B9F199900433448 /* ProfileViewController.swift in Sources */,
 				D2A6E73E2B9EF02100F38987 /* MainTabBarController.swift in Sources */,
-				465A6E792BA193BD001678BB /* Token.swift in Sources */,
+				D257E21B2BA07E670079B761 /* Token.swift in Sources */,
 				9B4C8FA92B9FAC8A00433448 /* TyreListViewController.swift in Sources */,
-				9B4C8FA32B9F1B2600433448 /* RequestViewController.swift in Sources */,
 				D2A6E73A2B9EF02100F38987 /* AppDelegate.swift in Sources */,
 				9B4C8F9F2B9F16E300433448 /* HomeViewController.swift in Sources */,
 				D2A6E7652B9EFFAF00F38987 /* NetworkManger.swift in Sources */,
@@ -290,7 +286,6 @@
 				D2A6E7792BA05F6C00F38987 /* WelcomeScreenViewController.swift in Sources */,
 				D2A6E7652B9EFFAF00F38987 /* NetworkManger.swift in Sources */,
 				D2A6E73C2B9EF02100F38987 /* SceneDelegate.swift in Sources */,
-				9B4C8FB52BA1963800433448 /* UserModel.swift in Sources */,
 				469D2E2D2BA03CF3002E3E61 /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

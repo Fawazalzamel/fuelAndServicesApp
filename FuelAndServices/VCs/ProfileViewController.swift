@@ -35,16 +35,20 @@ class ProfileViewController: UIViewController {
         view.addSubview(imageView)
         view.addSubview(emailLabel)
         
-        imageView.image = UIImage(named: "profile")
+        imageView.image = UIImage(named: "KHAN")
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.clipsToBounds = true
         
-        usernameLabel.text = "   Username: Fatma123 "
-        emailLabel.text = "  Email: Fatma@gmail.com  "
-        phoneNumberLabel.text = "  Phone Number: 00965 "
+        
+        usernameLabel.text = "   Username: Khanxniowe "
+        emailLabel.text = "  Email: Khanxniowe@gmail.com  "
+        phoneNumberLabel.text = "  Phone Number: +919287940280"
         
         
         // Do any additional setup after loading the view.
         setupUI()
         setupLayout()
+        setupNaviBar()
         
     }
     
@@ -73,10 +77,11 @@ class ProfileViewController: UIViewController {
         imageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
            // make.leading.equalToSuperview().offset(20)
-            //make.width.height.equalTo(75)
+            make.height.equalTo(300)
+            make.width.equalTo(300)
             make.centerX.equalToSuperview()
         }
-        imageView.layer.cornerRadius = 300
+        imageView.layer.cornerRadius = 30
         imageView.clipsToBounds = true
         
         usernameLabel.snp.makeConstraints { make in
@@ -106,6 +111,22 @@ class ProfileViewController: UIViewController {
         
     }
       
+    private func setupNaviBar() {
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "clock.arrow.circlepath"),
+        style: .plain,
+        target: self,
+        action: #selector(PresentHistoryVC))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.systemBlue
+    }
+    
+    @objc func PresentHistoryVC(){
+    let profilepage = UINavigationController(rootViewController:  HistoryTableViewController())
+        profilepage.modalPresentationStyle = .popover
+    self.present(profilepage, animated: true)
+}
+    
+
 }
 
 
