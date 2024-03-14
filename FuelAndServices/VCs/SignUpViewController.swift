@@ -111,21 +111,24 @@ class SignUpViewController : FormViewController {
         let email = emailRow?.value ?? ""
         let phoneNumber = phoneNumberRow?.value
         
-        //               let user = User(username: username, email: email, password: password)
-        //                   print(user)
-        //
-        //        NetworkManager.shared.signup(user: user ){ success in
-        //
-        //            DispatchQueue.main.async {
-        //
-        //                switch success{
-        //                case .success(let tokenResponse):
-        //                    print(tokenResponse.token)
-        //                case .failure(let error):
-        //                    print(error)
-        //                }
-        //                }
-        //            }
+//                       let user = UserModel(user_Id: 0, username: username, email: email, password: password, phoneNumber: phoneNumber, token: nil)
+        
+        
+        
+//                NetworkManger.shared.signup(user: user ){ success in
+//        
+//                    DispatchQueue.main.async {
+//        
+//                        switch success{
+//                        case .success(let tokenResponse):
+//                            print(tokenResponse.token)
+//                        case .failure(let error):
+//                            print(error)
+//                        }
+//                        }
+//                    }
+        
+        //Check with mubark the code above 
     }
     
     private func presentAlertWithTitle(title: String, message: String) {

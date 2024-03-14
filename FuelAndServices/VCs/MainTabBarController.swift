@@ -13,7 +13,7 @@ class MainTabBarController: UITabBarController {
         let homeViewController = HomeViewController()
         homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         
-        let requestViewController = RequestViewController()
+        let requestViewController = RequestPageViewController()
         requestViewController.tabBarItem = UITabBarItem(title: "Request", image: UIImage(systemName: "square.and.arrow.down"), selectedImage: UIImage(systemName: "square.and.arrow.down.fill"))
         
         let profileViewController = ProfileViewController()
