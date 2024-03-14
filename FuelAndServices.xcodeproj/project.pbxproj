@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		465A6E792BA193BD001678BB /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A6E762BA193BD001678BB /* Token.swift */; };
-		465A6E7A2BA193BD001678BB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A6E772BA193BD001678BB /* UserModel.swift */; };
-		465A6E7B2BA193BD001678BB /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A6E782BA193BD001678BB /* RequestModel.swift */; };
 		46807D572B9F14940066BC73 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46807D562B9F14940066BC73 /* ProfileViewController.swift */; };
 		46807D592B9F15000066BC73 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46807D582B9F15000066BC73 /* Profile.swift */; };
 		469D2E2B2BA03C08002E3E61 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469D2E2A2BA03C08002E3E61 /* History.swift */; };
@@ -43,9 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		465A6E762BA193BD001678BB /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		465A6E772BA193BD001678BB /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		465A6E782BA193BD001678BB /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		46807D562B9F14940066BC73 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		46807D582B9F15000066BC73 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = FuelAndServices/Models/Profile.swift; sourceTree = SOURCE_ROOT; };
 		469D2E2A2BA03C08002E3E61 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
@@ -266,9 +260,7 @@
 				469D2E2F2BA043A9002E3E61 /* DetailViewController.swift in Sources */,
 				D2A6E73E2B9EF02100F38987 /* MainTabBarController.swift in Sources */,
 				46807D592B9F15000066BC73 /* Profile.swift in Sources */,
-				465A6E7A2BA193BD001678BB /* UserModel.swift in Sources */,
 				469D2E2B2BA03C08002E3E61 /* History.swift in Sources */,
-				465A6E7B2BA193BD001678BB /* RequestModel.swift in Sources */,
 				D2A6E73A2B9EF02100F38987 /* AppDelegate.swift in Sources */,
 				D2A6E7762BA0533400F38987 /* SignUpViewController.swift in Sources */,
 				D2A6E7692B9F10CC00F38987 /* SignInViewController.swift in Sources */,
@@ -280,7 +272,6 @@
 				9B4C8FB42BA1963800433448 /* Token.swift in Sources */,
 				9B4C8FA12B9F199900433448 /* ProfileViewController.swift in Sources */,
 				D2A6E73E2B9EF02100F38987 /* MainTabBarController.swift in Sources */,
-				465A6E792BA193BD001678BB /* Token.swift in Sources */,
 				9B4C8FA92B9FAC8A00433448 /* TyreListViewController.swift in Sources */,
 				9B4C8FA32B9F1B2600433448 /* RequestViewController.swift in Sources */,
 				D2A6E73A2B9EF02100F38987 /* AppDelegate.swift in Sources */,
