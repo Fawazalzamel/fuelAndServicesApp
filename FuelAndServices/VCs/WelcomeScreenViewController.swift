@@ -14,11 +14,7 @@ class WelcomeScreenViewController: UIViewController {
 //    let subTitleLabel = UILabel()
     let signInButton = UIButton()
     let signUpButton = UIButton()
-    let topImageView: UIImageView = {
-    let imageView = UIImageView(image: UIImage(named: "logoblck"))
-    imageView.contentMode = .scaleAspectFit
-    return imageView
-    }()
+    
     let topImageView = UIImageView()
     let signUpQuestionLabel = UILabel()
     
@@ -29,8 +25,6 @@ class WelcomeScreenViewController: UIViewController {
         title = "Welcome Page"
         view.backgroundColor = .white
         view.addSubview(topImageView)
-//        view.addSubview(welcomeTextLabel)
-//        view.addSubview(subTitleLabel)
         view.addSubview(signInButton)
         view.addSubview(signUpButton)
         view.addSubview(signUpQuestionLabel)
@@ -42,11 +36,9 @@ class WelcomeScreenViewController: UIViewController {
         topImageView.image = UIImage(named: "logo")
                topImageView.contentMode = .scaleAspectFit
         
-        welcomeTextLabel.text = " Welcome "
-        welcomeTextLabel.font = UIFont.boldSystemFont(ofSize: 25)
+       
         
         signInButton.setTitle("Sign In", for: .normal)
-       // signInButton.backgroundColor =  #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
         signInButton.backgroundColor = .darkerOrange
         signInButton.setTitleColor(UIColor.white, for: .normal)
         signInButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
@@ -59,20 +51,7 @@ class WelcomeScreenViewController: UIViewController {
         signUpButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
         signUpButton.layer.cornerRadius = 10
         
-        welcomeTextLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(-100)
-        }
-//        welcomeTextLabel.text = "Welcome!"
-//        welcomeTextLabel.font = UIFont(name: "Times New Roman", size: 25)
-//        subTitleLabel.text = "All your car needs brought to you in one click"
-//                subTitleLabel.font = UIFont(name: "Times New Roman", size: 18)
-//                subTitleLabel.numberOfLines = 0
-//                subTitleLabel.textAlignment = .left
         
-        
-
         configureButton(signInButton, title: "Sign In", fontSize: 20)
         configureButton(signUpButton, title: "Sign Up", fontSize: 15)
 
@@ -87,15 +66,7 @@ class WelcomeScreenViewController: UIViewController {
                   make.leading.trailing.equalToSuperview()
                   make.height.equalTo(490)
               }
-//        welcomeTextLabel.snp.makeConstraints { make in
-//            make.top.equalTo(topImageView.snp.bottom).offset(40)
-//                       make.leading.equalToSuperview().offset(20)
-//                }
-//        subTitleLabel.snp.makeConstraints { make in
-//                   make.top.equalTo(welcomeTextLabel.snp.bottom).offset(5)
-//                   make.leading.equalToSuperview().offset(20)
-//                   make.trailing.equalToSuperview().offset(-20)
-//               }
+
         signInButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
                         make.centerY.equalToSuperview().offset(80)
