@@ -3,7 +3,7 @@
 import UIKit
 import SnapKit
 class HomeViewController: UIViewController {
-
+    var token : String?
     let topImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "logo2"))
         imageView.contentMode = .scaleAspectFit
@@ -72,6 +72,7 @@ class HomeViewController: UIViewController {
         setupTopImageView()
         setupUI()
         setupWalletSection()
+        self.navigationItem.backBarButtonItem?.isHidden = true
     }
     private func setupWalletSection() {
             view.addSubview(walletLabel)

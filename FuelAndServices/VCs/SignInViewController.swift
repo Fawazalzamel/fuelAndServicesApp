@@ -77,28 +77,32 @@ class SigninViewController: FormViewController {
         
 
         
-//            let user = UserModel(user_Id: 0, username: username, email: nil, password: password, phoneNumber: nil, token: nil)
+            let user = UserModel(user_Id: 0, username: username, email: nil, password: password, phoneNumber: nil, token: nil)
         
-//        NetworkManger.shared.signIn(user: user) { result in
-//            switch result {
-//            case .success(let tokenResponse):
-//                
-//                print("Sign in successful. Token: \(tokenResponse.token)")
-//                DispatchQueue.main.async {
-//                   
-//                                    
-//                    let vC = HomeViewController()
-//                    vC.token = tokenResponse.token
-//                    self.navigationController?.pushViewController(vC, animated: true)
-//
-//                }
-//            case .failure(let error):
-//                
-//                print("Sign in failed with error: \(error.localizedDescription)")
-//                DispatchQueue.main.async {
-//                }
-//            }
-//        }
+        NetworkManger.shared.signIn(user: user) { result in
+            switch result {
+            case .success(let tokenResponse):
+                
+                print("Sign in successful. Token: \(tokenResponse.token)")
+                DispatchQueue.main.async {
+                   
+                                    
+                    let vC = MainTabBarController()
+                    vC.token = tokenResponse.token
+                    let userDefault = UserDefaults.standard
+                    userDefault.set(tokenResponse.token, forKey: "token")
+//                    self.present(vC, animated: true)
+                    self.navigationController?.pushViewController(vC, animated: true)
+
+                }
+            case .failure(let error):
+                
+                print("Sign in failed with error: \(error.localizedDescription)")
+                
+                DispatchQueue.main.async {
+                }
+            }
+        }
     }
     
 
@@ -109,40 +113,3 @@ class SigninViewController: FormViewController {
         present(alert, animated: true, completion: nil)
     }
 }
-
-
-
-
-
-
-
-#if canImport(SwiftUI) && DEBUG
-struct SigninViewControllerPreview: PreviewProvider {
-    static var previews: some View {
-        GenericViewControllerRepresentable(SigninViewController())
-    }
-}
-#endif
-
-
-
-
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-
-struct GenericViewControllerRepresentable<ViewController: UIViewController>: UIViewControllerRepresentable {
-    
-    let viewController: ViewController
-    
-    init(_ builder: @autoclosure @escaping () -> ViewController) {
-        self.viewController = builder()
-    }
-    
-    func makeUIViewController(context: Context) -> ViewController {
-        viewController
-    }
-    
-    func updateUIViewController(_ uiViewController: ViewController, context: Context) {
-    }
-}
-#endif
