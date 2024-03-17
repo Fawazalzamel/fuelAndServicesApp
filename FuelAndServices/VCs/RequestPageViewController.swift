@@ -11,7 +11,7 @@ import Eureka
 
 class RequestPageViewController: FormViewController {
 
-    
+    var token: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class RequestPageViewController: FormViewController {
 
         
         title = "Request Page"
+        token = UserDefaults.standard.string(forKey: "token")
     }
     
     private func setupForm() {
@@ -108,26 +109,31 @@ class RequestPageViewController: FormViewController {
                 let location = locationRow?.value ?? ""
         
 
-        
+        var service_Id: Int?
         let request = RequestModel(request_Id: nil, location: location, carType: carType, fuelType: fuelType)
         print(request)
-//
-//              // Call addBook to add the book, backend will handle assigning an ID
-//              NetworkManager.shared.addPet(pet: pet) { success in
-//                  DispatchQueue.main.async {
-//                      if success {
-//                          // Dismiss the form upon successful submission
-//                          self.dismiss(animated: true, completion: nil)
-//                      } else {
-//                          // Handle submission error, e.g., show an error alert
-//                      }
-//                  }
-//              }
+        switch serviceType ?? ServiceType.fuel{
+        case ServiceType.fuel:
+            service_Id = 1
+        case ServiceType.major:
+            service_Id = 2
+        case ServiceType.minor:
+            service_Id = 3
+        case ServiceType.tires:
+            service_Id = 4
+        }
+        print(token ?? "no token")
+        NetworkManger.shared.addRequest(token: token ?? "", request: request, service_Id: service_Id ?? 0) { success in
+                    DispatchQueue.main.async {
+                                    if success {
+                                              self.dismiss(animated: true, completion: nil)
+                                } else {
+
+                            }
+                        }
+                }
         
         alertWithTitle(title: "Request Successful", message: "")
-        
-    
-        
         
         
           }

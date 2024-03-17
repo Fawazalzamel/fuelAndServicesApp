@@ -10,7 +10,7 @@ class MainTabBarController: UITabBarController {
         setupViewControllers()
         customizeTabBarAppearance()
         token = UserDefaults.standard.string(forKey: "token")
-        print(token)
+        print("main: " + (token ?? "no token"))
     }
     
     func setupViewControllers() {
@@ -18,6 +18,7 @@ class MainTabBarController: UITabBarController {
         homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         
         let requestViewController = RequestPageViewController()
+        requestViewController.token = token
         requestViewController.tabBarItem = UITabBarItem(title: "Request", image: UIImage(systemName: "square.and.arrow.down"), selectedImage: UIImage(systemName: "square.and.arrow.down.fill"))
         
         let profileViewController = ProfileViewController()

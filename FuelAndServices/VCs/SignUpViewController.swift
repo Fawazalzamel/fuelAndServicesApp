@@ -4,9 +4,6 @@
 //
 //  Created by Fawaz Alzamel on 11/03/2024.
 //
-
-
-
 import UIKit
 import Eureka
 import Alamofire
@@ -14,8 +11,6 @@ import Foundation
 import SnapKit
 
 class SignUpViewController : FormViewController {
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,10 +64,10 @@ class SignUpViewController : FormViewController {
             
         }
         
-        <<< IntRow() { row in
+        <<< PhoneRow() { row in
             row.title = "Phone Number"
             row.placeholder = "Enter Phone Number"
-            row.tag = "PhoneNumber"
+            row.tag = "phone"
             row.add(rule: RuleRequired())
             row.validationOptions = .validatesOnChange
             row.cellUpdate { cell, row in
@@ -93,8 +88,6 @@ class SignUpViewController : FormViewController {
         
     }
     @objc func submitTapped() {
-        
-        
         let errors = form.validate()
         guard errors.isEmpty else {
             presentAlertWithTitle(title: "🚨", message: "\(errors.count) fields are missing")
@@ -102,34 +95,38 @@ class SignUpViewController : FormViewController {
         }
         
         let usernameRow : TextRow? = form.rowBy(tag: "Username")
-        let passwordRow :TextRow? = form.rowBy(tag: "Password")
+        let passwordRow :PasswordRow? = form.rowBy(tag: "Password")
         let emailRow :EmailRow? = form.rowBy(tag: "Email")
-        let phoneNumberRow :IntRow? = form.rowBy(tag: "PhoneNumber")
+        let phoneNumberRow :PhoneRow? = form.rowBy(tag: "phone")
         
-        let username = usernameRow?.value ?? ""
-        let password = passwordRow?.value ?? ""
-        let email = emailRow?.value ?? ""
-        let phoneNumber = phoneNumberRow?.value ?? 00
-        
-        let user = UserModel(user_Id: nil, username: username, email: email, password: password, phoneNumber: phoneNumber, token: nil)
-        
-        
+        let username = usernameRow?.value ?? "username not found"
+        let password = passwordRow?.value ?? "password not found"
+        let email = emailRow?.value ?? "email not found"
+        let phoneNumber = phoneNumberRow?.value ?? "PhoneNumber not found"
+        print(username)
+        print(password)
+        print(email)
+        print(phoneNumber)
+//        var newPhonenumber = Int(phoneNumber)
+        let user = UserModel(user_Id: nil, username: username, email: email, password: password, phoneNumber: Int(phoneNumber) ?? 0, token: nil)
         
                 NetworkManger.shared.signup(user: user ){ success in
         
                     DispatchQueue.main.async {
         
-                        switch success{
-                        case .success(let tokenResponse):
-                            print(tokenResponse.token)
-                            let vC = MainTabBarController()
-                            vC.token = tokenResponse.token
+                        switch success {
+                        case .success():
+                            print("Navigaiton")
+                            
+                            
+                           // print(tokenResponse.token)
+                            //let vC = MainTabBarController()
+                           // vC.token = tokenResponse.token
                         case .failure(let error):
-                            print(error)
+                            print(error.localizedDescription)
                         }
                         }
                     }
-        
     }
     
     private func presentAlertWithTitle(title: String, message: String) {
