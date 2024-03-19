@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     private let phoneNumberLabel = UILabel()
     private let imageView = UIImageView()
     private let emailLabel = UILabel()
-    let signOutButton = UIButton(type: .system)
+//    let signOutButton = UIButton(type: .system)
     
     
     
@@ -35,7 +35,7 @@ class ProfileViewController: UIViewController {
         view.addSubview(phoneNumberLabel)
         view.addSubview(imageView)
         view.addSubview(emailLabel)
-        view.addSubview(signOutButton)
+//        view.addSubview(signOutButton)
         
         imageView.image = UIImage(named: "myprofile")
         imageView.layer.cornerRadius = imageView.frame.size.width/2
@@ -43,9 +43,9 @@ class ProfileViewController: UIViewController {
         
         
         
-        usernameLabel.text = "   Username: Khanxniowe "
-        emailLabel.text = "  Email: Khanxniowe@gmail.com  "
-        phoneNumberLabel.text = "  Phone Number: +919287940280"
+        usernameLabel.text = "   Username: Fawaz "
+        emailLabel.text = "  Email: Fawaz@gmail.com  "
+        phoneNumberLabel.text = "  Phone Number: +9659872627"
         
         
         // Do any additional setup after loading the view.
@@ -68,15 +68,15 @@ class ProfileViewController: UIViewController {
         
         //Button
         
-        signOutButton.setTitle("Sign Out", for: .normal)
-        signOutButton.backgroundColor =  #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
-        signOutButton.setTitleColor(UIColor.white, for: .normal)
-        signOutButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
-        signOutButton.layer.cornerRadius = 10
-        signOutButton.layer.shadowColor = UIColor.black.cgColor
-        signOutButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        signOutButton.layer.shadowOpacity = 0.5
-        signOutButton.layer.shadowRadius = 5.0
+//        signOutButton.setTitle("Sign Out", for: .normal)
+//        signOutButton.backgroundColor =  #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+//        signOutButton.setTitleColor(UIColor.white, for: .normal)
+//        signOutButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+//        signOutButton.layer.cornerRadius = 10
+//        signOutButton.layer.shadowColor = UIColor.black.cgColor
+//        signOutButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+//        signOutButton.layer.shadowOpacity = 0.5
+//        signOutButton.layer.shadowRadius = 5.0
 
         
         
@@ -122,32 +122,32 @@ class ProfileViewController: UIViewController {
 
         }
         
-        signOutButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(350)
-            make.width.equalTo(150)
-            make.height.equalTo(50)
-            
-            
-        }
-        
-    
-        signOutButton.addTarget(self, action: #selector(signOutButtonTapped), for: .touchUpInside)
-        
-    }
-    
-    @objc func signOutButtonTapped(){
-        UserDefaults.standard.removeObject(forKey: "isLoggedIn")
-        
-        navigationController?.popToRootViewController(animated: true)
-        
-        let profilepage = UINavigationController(rootViewController: WelcomeScreenViewController ())
-        profilepage.modalPresentationStyle = .automatic
-        
-        
-        
-    }
-   
+//        signOutButton.snp.makeConstraints { make in
+//            make.centerX.equalToSuperview()
+//            make.centerY.equalToSuperview().offset(350)
+//            make.width.equalTo(150)
+//            make.height.equalTo(50)
+//            
+//            
+//        }
+//        
+//    
+//        signOutButton.addTarget(self, action: #selector(signOutButtonTapped), for: .touchUpInside)
+//        
+//    }
+//    
+//    @objc func signOutButtonTapped(){
+//        UserDefaults.standard.removeObject(forKey: "isLoggedIn")
+//        
+//        navigationController?.popToRootViewController(animated: true)
+//        
+//        let profilepage = UINavigationController(rootViewController: WelcomeScreenViewController ())
+//        profilepage.modalPresentationStyle = .automatic
+//        
+//        
+//        
+  }
+//   
         
         
    

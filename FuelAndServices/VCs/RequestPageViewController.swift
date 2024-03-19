@@ -26,6 +26,7 @@ class RequestPageViewController: FormViewController {
     }
     
     private func setupForm() {
+        form +++ Section()
         form +++ Section("Request Form")
         
     
@@ -37,7 +38,7 @@ class RequestPageViewController: FormViewController {
             row.tag = "carType"
             
         }
-        
+        form +++ Section()
         
         <<< ActionSheetRow<FuelType>() { row in
             row.title = "Fuel Type"
@@ -46,7 +47,7 @@ class RequestPageViewController: FormViewController {
             row.tag = "fuelType"
         }
         
-        
+        form +++ Section()
         <<< ActionSheetRow<ServiceType> { row in
             row.title = "Service Type"
             row.options = [ServiceType.major,ServiceType.minor, ServiceType.tires,ServiceType.fuel]
@@ -54,6 +55,7 @@ class RequestPageViewController: FormViewController {
             row.tag = "serviceType"
            
                     }
+        form +++ Section()
         
         <<< TextRow() { row in
             row.title = "Location"
@@ -70,9 +72,13 @@ class RequestPageViewController: FormViewController {
     
         form +++ Section()
         form +++ Section()
+        form +++ Section()
         
         <<< ButtonRow() { row in
             row.title = "Submit Request"
+            row.cell.tintColor = UIColor(red: 255/255, green:102/255, blue: 0/255, alpha: 1)
+            row.cell.backgroundColor = .white
+            row.cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         }.onCellSelection { _, _ in
             self.submitTapped()
         }

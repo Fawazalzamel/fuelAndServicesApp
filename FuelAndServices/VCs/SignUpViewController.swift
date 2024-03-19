@@ -119,6 +119,9 @@ class SignUpViewController : FormViewController {
                             print("Navigaiton")
                             
                             
+                            let loginVC = SigninViewController()
+                            self.navigationController?.pushViewController(loginVC, animated: true)
+                            
                            // print(tokenResponse.token)
                             //let vC = MainTabBarController()
                            // vC.token = tokenResponse.token

@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
 
         let balanceLabel: UILabel = {
             let label = UILabel()
-            label.text = "KWD100.00"
+            label.text = "KWD0.00"
             label.textAlignment = .left
             label.font = UIFont.boldSystemFont(ofSize: 24)
             label.textColor = .darkerOrange
@@ -154,7 +154,7 @@ class HomeViewController: UIViewController {
 
     private func setupTitleLabelConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(topImageView.snp.bottom).offset(50)
+            make.top.equalTo(topImageView.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(15)
             make.trailing.equalToSuperview().offset(-30)
         }
